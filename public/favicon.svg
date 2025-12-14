@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#D4AF37;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F4D03F;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="50" cy="50" r="48" fill="#1a1a1a" stroke="url(#goldGradient)" stroke-width="2"/>
+  
+  <!-- Camera/Frame icon representing photography -->
+  <rect x="30" y="35" width="40" height="30" fill="none" stroke="url(#goldGradient)" stroke-width="2.5" rx="2"/>
+  <circle cx="50" cy="50" r="8" fill="none" stroke="url(#goldGradient)" stroke-width="2"/>
+  <circle cx="50" cy="50" r="4" fill="url(#goldGradient)"/>
+  
+  <!-- Decorative elements -->
+  <path d="M 25 50 L 30 50" stroke="url(#goldGradient)" stroke-width="2" stroke-linecap="round"/>
+  <path d="M 70 50 L 75 50" stroke="url(#goldGradient)" stroke-width="2" stroke-linecap="round"/>
+</svg>
+

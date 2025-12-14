@@ -1,0 +1,17 @@
+{
+  "name": "Yesterday Wedding Photography",
+  "short_name": "Yesterday",
+  "description": "Luxury Wedding Photography & Cinematic Films",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "theme_color": "#D4AF37",
+  "background_color": "#1a1a1a",
+  "display": "standalone"
+}
+
