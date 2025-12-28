@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wedding Font Combinations Preview</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Option 1: Classic Elegance -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Great+Vibes&display=swap" rel="stylesheet">
+  
+  <!-- Option 2: Modern Luxury -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Allura&display=swap" rel="stylesheet">
+  
+  <!-- Option 3: Timeless Romance -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Parisienne&display=swap" rel="stylesheet">
+  
+  <!-- Option 4: Current (EB Garamond) -->
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      background: linear-gradient(135deg, #f5f5f0 0%, #e8e5d9 100%);
+      padding: 40px 20px;
+      font-family: 'Lora', serif;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    h1 {
+      text-align: center;
+      margin-bottom: 60px;
+      font-size: 3rem;
+      color: #2c2c2c;
+      font-family: 'Playfair Display', serif;
+    }
+    
+    .option {
+      background: white;
+      padding: 40px;
+      margin-bottom: 60px;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+    
+    .option-title {
+      font-size: 2rem;
+      margin-bottom: 30px;
+      padding-bottom: 15px;
+      border-bottom: 2px solid #d4af37;
+      color: #2c2c2c;
+    }
+    
+    .font-specs {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      margin-bottom: 40px;
+      padding: 20px;
+      background: #f9f9f9;
+      border-radius: 6px;
+    }
+    
+    .spec-item {
+      font-size: 0.9rem;
+      color: #666;
+    }
+    
+    .spec-item strong {
+      color: #2c2c2c;
+      display: block;
+      margin-bottom: 5px;
+    }
+    
+    /* Option 1: Classic Elegance */
+    .option-1 .heading {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5rem;
+      font-weight: 400;
+      line-height: 1.1;
+      margin-bottom: 20px;
+      color: #2c2c2c;
+    }
+    
+    .option-1 .body {
+      font-family: 'Lora', serif;
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #444;
+      margin-bottom: 30px;
+    }
+    
+    .option-1 .accent {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.5rem;
+      color: #d4af37;
+      text-align: center;
+      margin: 30px 0;
+    }
+    
+    /* Option 2: Modern Luxury */
+    .option-2 .heading {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3.5rem;
+      font-weight: 400;
+      line-height: 1.1;
+      margin-bottom: 20px;
+      color: #2c2c2c;
+    }
+    
+    .option-2 .body {
+      font-family: 'Lora', serif;
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #444;
+      margin-bottom: 30px;
+    }
+    
+    .option-2 .accent {
+      font-family: 'Allura', cursive;
+      font-size: 2.5rem;
+      color: #d4af37;
+      text-align: center;
+      margin: 30px 0;
+    }
+    
+    /* Option 3: Timeless Romance */
+    .option-3 .heading {
+      font-family: 'Cinzel', serif;
+      font-size: 3.5rem;
+      font-weight: 400;
+      line-height: 1.1;
+      margin-bottom: 20px;
+      color: #2c2c2c;
+    }
+    
+    .option-3 .body {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #444;
+      margin-bottom: 30px;
+    }
+    
+    .option-3 .accent {
+      font-family: 'Parisienne', cursive;
+      font-size: 2.5rem;
+      color: #d4af37;
+      text-align: center;
+      margin: 30px 0;
+    }
+    
+    /* Option 4: Current (EB Garamond) */
+    .option-4 .heading {
+      font-family: 'EB Garamond', serif;
+      font-size: 3.5rem;
+      font-weight: 400;
+      line-height: 1.1;
+      margin-bottom: 20px;
+      color: #2c2c2c;
+    }
+    
+    .option-4 .body {
+      font-family: 'EB Garamond', serif;
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #444;
+      margin-bottom: 30px;
+    }
+    
+    .preview-section {
+      margin-top: 40px;
+      padding: 30px;
+      background: #fafafa;
+      border-left: 4px solid #d4af37;
+    }
+    
+    .preview-section h3 {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      color: #2c2c2c;
+    }
+    
+    .button-preview {
+      display: inline-block;
+      padding: 12px 30px;
+      margin-top: 20px;
+      border: 1px solid #2c2c2c;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      font-size: 0.75rem;
+      color: #2c2c2c;
+      transition: all 0.3s;
+    }
+    
+    .button-preview:hover {
+      background: #2c2c2c;
+      color: white;
+    }
+    
+    .current-badge {
+      display: inline-block;
+      background: #d4af37;
+      color: white;
+      padding: 5px 15px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      margin-left: 15px;
+      font-weight: 500;
+    }
+    
+    @media (max-width: 768px) {
+      .font-specs {
+        grid-template-columns: 1fr;
+      }
+      
+      .option-1 .heading,
+      .option-2 .heading,
+      .option-3 .heading,
+      .option-4 .heading {
+        font-size: 2.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Wedding Font Combinations Preview</h1>
+    
+    <!-- Option 1: Classic Elegance -->
+    <div class="option option-1">
+      <h2 class="option-title">Option 1: Classic Elegance</h2>
+      <div class="font-specs">
+        <div class="spec-item">
+          <strong>Headings:</strong> Playfair Display
+        </div>
+        <div class="spec-item">
+          <strong>Body:</strong> Lora
+        </div>
+        <div class="spec-item">
+          <strong>Accents:</strong> Great Vibes
+        </div>
+        <div class="spec-item">
+          <strong>Style:</strong> Timeless & Elegant
+        </div>
+      </div>
+      
+      <div class="preview-section">
+        <div class="heading">Timeless Wedding Stories</div>
+        <div class="body">
+          We don't just photograph weddings—we craft visual narratives that preserve the essence of your special day. Each frame tells a story, each moment becomes a memory. Our artistry lies in capturing the emotions, the laughter, and the love that make your wedding day truly unique.
+        </div>
+        <div class="accent">Sarah & James</div>
+        <div class="body">
+          "Yesterday didn't just photograph our wedding—they captured our souls. Every image feels like a piece of art we'll treasure forever."
+        </div>
+        <a href="#" class="button-preview">Get in Touch</a>
+      </div>
+    </div>
+    
+    <!-- Option 2: Modern Luxury -->
+    <div class="option option-2">
+      <h2 class="option-title">Option 2: Modern Luxury</h2>
+      <div class="font-specs">
+        <div class="spec-item">
+          <strong>Headings:</strong> Cormorant Garamond
+        </div>
+        <div class="spec-item">
+          <strong>Body:</strong> Lora
+        </div>
+        <div class="spec-item">
+          <strong>Accents:</strong> Allura
+        </div>
+        <div class="spec-item">
+          <strong>Style:</strong> Refined & Sophisticated
+        </div>
+      </div>
+      
+      <div class="preview-section">
+        <div class="heading">Timeless Wedding Stories</div>
+        <div class="body">
+          We don't just photograph weddings—we craft visual narratives that preserve the essence of your special day. Each frame tells a story, each moment becomes a memory. Our artistry lies in capturing the emotions, the laughter, and the love that make your wedding day truly unique.
+        </div>
+        <div class="accent">Sarah & James</div>
+        <div class="body">
+          "Yesterday didn't just photograph our wedding—they captured our souls. Every image feels like a piece of art we'll treasure forever."
+        </div>
+        <a href="#" class="button-preview">Get in Touch</a>
+      </div>
+    </div>
+    
+    <!-- Option 3: Timeless Romance -->
+    <div class="option option-3">
+      <h2 class="option-title">Option 3: Timeless Romance</h2>
+      <div class="font-specs">
+        <div class="spec-item">
+          <strong>Headings:</strong> Cinzel
+        </div>
+        <div class="spec-item">
+          <strong>Body:</strong> Libre Baskerville
+        </div>
+        <div class="spec-item">
+          <strong>Accents:</strong> Parisienne
+        </div>
+        <div class="spec-item">
+          <strong>Style:</strong> Classic & Romantic
+        </div>
+      </div>
+      
+      <div class="preview-section">
+        <div class="heading">Timeless Wedding Stories</div>
+        <div class="body">
+          We don't just photograph weddings—we craft visual narratives that preserve the essence of your special day. Each frame tells a story, each moment becomes a memory. Our artistry lies in capturing the emotions, the laughter, and the love that make your wedding day truly unique.
+        </div>
+        <div class="accent">Sarah & James</div>
+        <div class="body">
+          "Yesterday didn't just photograph our wedding—they captured our souls. Every image feels like a piece of art we'll treasure forever."
+        </div>
+        <a href="#" class="button-preview">Get in Touch</a>
+      </div>
+    </div>
+    
+    <!-- Option 4: Current (EB Garamond) -->
+    <div class="option option-4">
+      <h2 class="option-title">Option 4: Current - EB Garamond <span class="current-badge">Currently Using</span></h2>
+      <div class="font-specs">
+        <div class="spec-item">
+          <strong>Headings:</strong> EB Garamond
+        </div>
+        <div class="spec-item">
+          <strong>Body:</strong> EB Garamond
+        </div>
+        <div class="spec-item">
+          <strong>Accents:</strong> EB Garamond (Italic)
+        </div>
+        <div class="spec-item">
+          <strong>Style:</strong> Classic & Uniform
+        </div>
+      </div>
+      
+      <div class="preview-section">
+        <div class="heading">Timeless Wedding Stories</div>
+        <div class="body">
+          We don't just photograph weddings—we craft visual narratives that preserve the essence of your special day. Each frame tells a story, each moment becomes a memory. Our artistry lies in capturing the emotions, the laughter, and the love that make your wedding day truly unique.
+        </div>
+        <div class="accent" style="font-family: 'EB Garamond', serif; font-style: italic;">Sarah & James</div>
+        <div class="body">
+          "Yesterday didn't just photograph our wedding—they captured our souls. Every image feels like a piece of art we'll treasure forever."
+        </div>
+        <a href="#" class="button-preview">Get in Touch</a>
+      </div>
+    </div>
+    
+  </div>
+</body>
+</html>

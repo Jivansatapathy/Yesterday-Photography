@@ -11,6 +11,8 @@ const CTASection = () => {
           src="/image/Folder2/DSC03307.webp"
           alt="Romantic destination wedding at sunset"
           className="w-full h-full object-cover"
+          loading="eager"
+          fetchPriority="high"
         />
       </div>
 

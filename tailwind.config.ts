@@ -66,8 +66,8 @@ export default {
         charcoal: "hsl(var(--charcoal))",
       },
       fontFamily: {
-        serif: ['Playfair Display', 'Georgia', 'serif'],
-        sans: ['Inter', '-apple-system', 'sans-serif'],
+        serif: ['EB Garamond', 'Adobe Garamond Pro', 'Garamond', 'serif'],
+        sans: ['EB Garamond', 'Adobe Garamond Pro', 'Garamond', 'serif'],
       },
       fontSize: {
         'hero': 'clamp(3rem, 8vw, 6rem)',

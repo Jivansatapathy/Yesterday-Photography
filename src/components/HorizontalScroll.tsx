@@ -39,8 +39,11 @@ const HorizontalScroll = () => {
       
       // Calculate horizontal scroll distance
       // Add extra padding to ensure last image is fully visible
-      const extraPadding = 100; // Add 100px padding to ensure last image is fully visible
-      const horizontalScrollLength = Math.max(0, pinWrap.scrollWidth - window.innerWidth + extraPadding);
+      const viewportWidth = window.innerWidth;
+      // Calculate extra padding as a percentage of viewport to ensure last image is fully visible
+      // This accounts for different screen sizes and ensures the last image has breathing room
+      const extraPadding = Math.max(viewportWidth * 0.2, 300); // 20% of viewport or 300px minimum
+      const horizontalScrollLength = Math.max(0, pinWrap.scrollWidth - viewportWidth + extraPadding);
 
       // Animate horizontal scroll
       const animation = gsap.to(pinWrap, {
@@ -363,7 +366,7 @@ const HorizontalScroll = () => {
         <div className="absolute inset-0 bg-black/40" />
         <div
           ref={pinWrapRef}
-          className="h-screen flex items-center gap-4 sm:gap-6 md:gap-[5vw] px-4 sm:px-6 md:px-[10vw] py-8 sm:py-12 md:py-[50px] lg:pt-[100px] will-change-transform relative z-10"
+          className="h-screen flex items-center gap-4 sm:gap-6 md:gap-[5vw] pl-4 sm:pl-6 md:pl-[10vw] pr-[20vw] sm:pr-[25vw] md:pr-[30vw] py-8 sm:py-12 md:py-[50px] lg:pt-[100px] will-change-transform relative z-10"
           style={{ width: "max-content" }}
         >
           <div className="text-base sm:text-lg md:text-xl lg:text-2xl max-w-[300px] sm:max-w-[350px] md:max-w-[400px] min-w-[85vw] sm:min-w-[70vw] md:min-w-[50vw] lg:min-w-[40vw] text-warm-white flex-shrink-0">

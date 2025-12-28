@@ -1,8 +1,7 @@
-import { useState, useEffect, lazy, Suspense } from "react";
-import { useLocation } from "react-router-dom";
+import { lazy, Suspense } from "react";
 import { Helmet } from "react-helmet-async";
 import MainLayout from "@/layouts/MainLayout";
-import Preloader from "@/components/Preloader";
+// import Preloader from "@/components/Preloader"; // Kept for potential future use
 import ParallaxGallery from "@/components/ParallaxGallery";
 import EnhancedHeroSection from "@/components/EnhancedHeroSection";
 import PhilosophySection from "@/components/PhilosophySection";
@@ -20,57 +19,8 @@ const HorizontalScroll = lazy(() => import("@/components/HorizontalScroll"));
 const MobileGallery = lazy(() => import("@/components/MobileGallery"));
 
 const Index = () => {
-  const location = useLocation();
-  const [showPreloader, setShowPreloader] = useState(false);
-
-  useEffect(() => {
-    // Only show preloader on the home page
-    if (location.pathname !== "/") {
-      return;
-    }
-
-    // Check if we navigated from another page (React Router navigation)
-    const navigatedFromOtherPage = sessionStorage.getItem("navigatedFromOtherPage") === "true";
-    
-    // If navigating from another page, don't show preloader
-    if (navigatedFromOtherPage) {
-      sessionStorage.removeItem("navigatedFromOtherPage");
-      return;
-    }
-
-    // Check navigation type and ensure we're on home page
-    const navigationEntries = performance.getEntriesByType("navigation") as PerformanceNavigationTiming[];
-    const navigationType = navigationEntries.length > 0 ? navigationEntries[0].type : null;
-    
-    // Get the previous path to check if we were on home page before refresh
-    const previousPath = sessionStorage.getItem("previousPath");
-    
-    // Show preloader only on:
-    // 1. Page reload (when user refreshes the home page specifically)
-    // 2. Initial page load (first visit to the site, landing on home page)
-    if (navigationType === "reload") {
-      // Only show if we were on home page before refresh
-      // If previousPath is null or "/", it means we were on home page
-      if (!previousPath || previousPath === "/") {
-        setShowPreloader(true);
-      }
-    } else if (navigationType === "navigate") {
-      // Initial page load - only show if landing on home page
-      // Check if this is the first visit and we're on home page
-      const hasVisitedHome = sessionStorage.getItem("hasVisitedHome");
-      if (!hasVisitedHome && location.pathname === "/") {
-        setShowPreloader(true);
-        sessionStorage.setItem("hasVisitedHome", "true");
-      }
-    }
-    
-    // Clear the navigation flag after checking
-    sessionStorage.removeItem("navigatedFromOtherPage");
-  }, [location.pathname]);
-
   return (
     <>
-      {showPreloader && <Preloader onComplete={() => setShowPreloader(false)} />}
       <MainLayout>
         <Helmet>
           <title>Yesterday | Luxury Wedding Photography & Cinematic Films</title>
